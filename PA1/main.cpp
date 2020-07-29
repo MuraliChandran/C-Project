@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "MemTracker.h"
-#include "Trace.h"
-
-
-
+//#include "MemTracker.h"
+//#include "Trace.h"
+#include "Names.h"
+#include "Condiments.h"
+#include "Order.h"
 // I will be testing this code
 // Add files to the project to make these functions work
 // Do not add source code to main.cpp
@@ -15,18 +15,18 @@
 
 int main()
 {
-MEM_TRACKER_START
+//MEM_TRACKER_START
 	
 	// useful samples
-	int x(5);
-	Trace::out("\n");
-	Trace::out("testing x:%d\n", x);
-	printf("\n");
-	printf("Standard I/O sample output\n");
-	printf("\n");
+	//int x(5);
+	//Trace::out("\n");
+	//Trace::out("testing x:%d\n", x);
+	//printf("\n");
+	//printf("Standard I/O sample output\n");
+	//printf("\n");
 
 // Remove for grading
-#if 0
+#if 1
 	// Jaime order:
 	HotDog  hotdog_A;
 		hotdog_A.Add(Condiments::Everything);
@@ -74,33 +74,33 @@ MEM_TRACKER_START
 		order_Sansa.Add(hotdog_F);
 		order_Sansa.Add(hotdog_G);
 
-	// Create Hot Dog stand
-	Stand stand;
-		stand.Add(order_Jamie);
-		stand.Add(order_Cersei);
-		stand.Add(order_Arya);
-		stand.Add(order_Sansa);
-		stand.Print();
+	//// Create Hot Dog stand
+	//Stand stand;
+	//	stand.Add(order_Jamie);
+	//	stand.Add(order_Cersei);
+	//	stand.Add(order_Arya);
+	//	stand.Add(order_Sansa);
+	//	stand.Print();
 
-	// Remove
-		stand.Remove(Name::Cersei);
-		stand.Print();
+	//// Remove
+	//	stand.Remove(Name::Cersei);
+	//	stand.Print();
 
-	// Remove
-		stand.Remove(Name::Sansa);
-		stand.Print();
+	//// Remove
+	//	stand.Remove(Name::Sansa);
+	//	stand.Print();
 
-	// Remove
-		stand.Remove(Name::Jaime);
-		stand.Print();
+	//// Remove
+	//	stand.Remove(Name::Jaime);
+	//	stand.Print();
 
-	// Remove
-		stand.Remove(Name::Arya);
-		stand.Print();
+	//// Remove
+	//	stand.Remove(Name::Arya);
+	//	stand.Print();
 #endif
 
 
-MEM_TRACKER_END
+//MEM_TRACKER_END
 
 	system("pause");
 }

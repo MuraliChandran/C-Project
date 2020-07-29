@@ -19,6 +19,12 @@
     <ClCompile Include="Trace.cpp">
       <Filter>Trace</Filter>
     </ClCompile>
+    <ClCompile Include="HotDog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Order.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\MemTracker\MemTracker.h">
@@ -34,6 +40,12 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Names.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HotDog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Order.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
