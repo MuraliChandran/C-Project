@@ -14,10 +14,14 @@ struct Node
 
 class HotDog
 {
+
 public:
 	void Add(Condiments Cond);
 	char* ReturnEnumValue(Condiments Cond);
+	void InsertNode(Condiments Cond);
+	
+	
 	Node* n =  nullptr;
-	Node* header = nullptr;
+	
 	
 };

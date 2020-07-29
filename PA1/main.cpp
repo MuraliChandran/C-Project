@@ -6,8 +6,7 @@
 //#include "Trace.h"
 #include "Names.h"
 #include "Condiments.h"
-#include "HotDog.h"
-
+#include "Order.h"
 // I will be testing this code
 // Add files to the project to make these functions work
 // Do not add source code to main.cpp
@@ -41,39 +40,39 @@ int main()
 		hotdog_C.Add(Condiments::Tomato_Wedge);
 		hotdog_C.Add(Condiments::Green_Relish);
 
-	//Order order_Jamie(Name::Jaime);
-	//	order_Jamie.Add(hotdog_A);
-	//	order_Jamie.Add(hotdog_B);
-	//	order_Jamie.Add(hotdog_C);
+	Order order_Jamie(Name::Jaime);
+		order_Jamie.Add(hotdog_A);
+		order_Jamie.Add(hotdog_B);
+		order_Jamie.Add(hotdog_C);
 
-	//// Cersei order:
-	//HotDog hotdog_D;
-	//	hotdog_D.Add(Condiments::Plain);
+	// Cersei order:
+	HotDog hotdog_D;
+		hotdog_D.Add(Condiments::Plain);
 
-	//Order order_Cersei(Name::Cersei);
-	//	order_Cersei.Add(hotdog_D);
-	//	order_Cersei.Add(hotdog_D);
+	Order order_Cersei(Name::Cersei);
+		order_Cersei.Add(hotdog_D);
+		order_Cersei.Add(hotdog_D);
 
-	//// Arya order:
-	//HotDog hotdog_E;
-	//	hotdog_E.Add(Condiments::Everything);
-	//	hotdog_E.Minus(Condiments::Sport_Peppers);
+	// Arya order:
+	HotDog hotdog_E;
+		hotdog_E.Add(Condiments::Everything);
+		//hotdog_E.Minus(Condiments::Sport_Peppers);
 
-	//Order order_Arya(Name::Arya);
-	//	order_Arya.Add(hotdog_E);
+	Order order_Arya(Name::Arya);
+		order_Arya.Add(hotdog_E);
 
-	//// Sansa order:
-	//HotDog hotdog_F;
-	//	hotdog_F.Add(Condiments::Chopped_Onions);
-	//	hotdog_F.Add(Condiments::Yellow_Mustard);
-	//	hotdog_F.Add(Condiments::Green_Relish);
+	// Sansa order:
+	HotDog hotdog_F;
+		hotdog_F.Add(Condiments::Chopped_Onions);
+		hotdog_F.Add(Condiments::Yellow_Mustard);
+		hotdog_F.Add(Condiments::Green_Relish);
 
-	//HotDog hotdog_G;
-	//	hotdog_G.Add(Condiments::Everything);
+	HotDog hotdog_G;
+		hotdog_G.Add(Condiments::Everything);
 
-	//Order order_Sansa(Name::Sansa);
-	//	order_Sansa.Add(hotdog_F);
-	//	order_Sansa.Add(hotdog_G);
+	Order order_Sansa(Name::Sansa);
+		order_Sansa.Add(hotdog_F);
+		order_Sansa.Add(hotdog_G);
 
 	//// Create Hot Dog stand
 	//Stand stand;
