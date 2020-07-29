@@ -1,6 +1,7 @@
 #ifndef CONDIMENTS_H
 #define CONDIMENTS_H
 
+
 // DO NOT CHANGE
 enum class Condiments
 {
@@ -13,7 +14,7 @@ enum class Condiments
 	Pickle_Spear   = 0x20,
 	Sport_Peppers  = 0x40,
 	Celery_Salt    = 0x80,
-	Everything     = 0xFE
+	Everything     = 0x100
 };
 
 #endif
