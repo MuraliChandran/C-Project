@@ -18,7 +18,7 @@ class HotDog
 public:
 	void Add(Condiments Cond);
 	void Minus(Condiments Cond);
-	char* ReturnEnumValue(Condiments Cond);
+	
 	void InsertNode(Condiments Cond);
 	
 	

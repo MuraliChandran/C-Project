@@ -1,6 +1,10 @@
 #include "Order.h"
 ONode *header = nullptr;
 
+Order::Order()
+{
+}
+
 Order::Order(Name n)
 {
 	IN = n;
@@ -8,7 +12,6 @@ Order::Order(Name n)
 
 void Order::Add(HotDog hotdog)
 {
-	(void)hotdog;
 
 	if (n == nullptr)
 	{
@@ -32,6 +35,10 @@ void Order::Add(HotDog hotdog)
 
 		header = header->next;
 	}
+}
+
+Order::~Order()
+{
 }
 
 

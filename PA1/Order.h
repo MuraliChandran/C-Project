@@ -14,12 +14,15 @@ struct ONode
 class Order
 {
 public:
+
+	Order();
 	Order(Name n);
 
 	void Add(HotDog hotdog);
 
-
 	Name IN;
 	ONode *n = nullptr;
+
+	~Order();
 	
 };
