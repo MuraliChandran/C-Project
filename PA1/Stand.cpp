@@ -1,45 +1,42 @@
+#include "Stand.h"
 #include "Order.h"
-ONode *header = nullptr;
 
-Order::Order()
+SNode *header = nullptr;
+
+Stand::Stand()
 {
 }
 
-Order::Order(Name n)
+void Stand::Add(Order order)
 {
-	IN = n;
-}
-
-void Order::Add(HotDog hotdog)
-{
-
+	(void)order;
 	if (n == nullptr)
 	{
-		n = new ONode();
+		n = new SNode();
+
 		n->next = nullptr;
 		n->prev = nullptr;
-		
-		n->hotdog = hotdog;
+
+		n->order = order;
 
 		header = n;
 	}
 	else
 	{
-		ONode *n1 = new ONode();
-
+		SNode *n1 = new SNode();
+		
 		header->next = n1;
 		n1->prev = header;
 		n1->next = nullptr;
 
-		n1->hotdog = hotdog;
+		n1->order = order;
 
 		header = header->next;
+
 	}
+
 }
 
-Order::~Order()
+void Stand::Print()
 {
 }
-
-
-
