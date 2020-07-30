@@ -1,61 +1,22 @@
 #include "HotDog.h"
-
+Node* header = nullptr;
 
 void HotDog::Add(Condiments Cond)
 {
-	
+
 	//For Everything
 	if (Condiments::Everything == Cond)
 	{
 		for (Condiments fooInt = Condiments::Yellow_Mustard; fooInt != Cond; ((int&)fooInt) *= 2)
 		{
-			if (n == nullptr)
-			{
-				n = new Node();
-				n->next = NULL;
-				n->prev = NULL;
-				n->CondV = fooInt;
-
-				header = n;
-				
-			}
-			else
-			{
-				Node *n1 = new Node();
-				
-				header->next = n1;
-				n1->prev = header;
-				n1->next = NULL;
-				n1->CondV = fooInt;
-				header = header->next;
-	  		}
-					
+			InsertNode(fooInt);
 		}
 	}
 	//Not for Everything
 	else
 	{
 
-		if (n == nullptr)
-		{
-			n = new Node();
-			n->next = NULL;
-			n->prev = NULL;
-			n->CondV = Cond;
-
-			header = n;
-		}
-		else
-		{
-			Node* n1 = new Node();
-
-			header->next = n1;
-			n1->prev = header;
-			n1->next = NULL;
-			n1->CondV = Cond;
-
-			header = header->next;
-		}
+		InsertNode(Cond);
 	}
 }
 
@@ -82,6 +43,32 @@ char* HotDog::ReturnEnumValue(Condiments c)
 	else
 		return "null";
 
+}
+
+void HotDog::InsertNode(Condiments Cond)
+{
+	if (n == nullptr)
+	{
+		n = new Node();
+		n->next = nullptr;
+		n->prev = nullptr;
+		n->CondV = Cond;
+
+		header = n;
+
+	}
+	else
+	{
+		Node *n1 = new Node();
+
+		header->next = n1;
+		n1->prev = header;
+		n1->next = nullptr;
+
+		n1->CondV = Cond;
+
+		header = header->next;
+	}
 }
 
 
