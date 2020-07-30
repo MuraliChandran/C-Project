@@ -3,7 +3,6 @@ Node* header = nullptr;
 
 void HotDog::Add(Condiments Cond)
 {
-
 	//For Everything
 	if (Condiments::Everything == Cond)
 	{
@@ -19,6 +18,29 @@ void HotDog::Add(Condiments Cond)
 		InsertNode(Cond);
 	}
 }
+
+void HotDog::Minus(Condiments Cond)
+{
+	Node* del = n;
+	while (del != nullptr)
+	{
+		if (del->CondV == Cond)
+		{
+			
+			del->prev->next = del->next;
+			del->next->prev = del->prev;
+
+			del = nullptr;
+
+			break;
+			
+		}
+		del = del->next;
+	}
+
+}
+
+
 
 char* HotDog::ReturnEnumValue(Condiments c)
 {
