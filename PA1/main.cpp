@@ -56,7 +56,7 @@ int main()
 	// Arya order:
 	HotDog hotdog_E;
 		hotdog_E.Add(Condiments::Everything);
-		//hotdog_E.Minus(Condiments::Sport_Peppers);
+		hotdog_E.Minus(Condiments::Sport_Peppers);
 
 	Order order_Arya(Name::Arya);
 		order_Arya.Add(hotdog_E);
