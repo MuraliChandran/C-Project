@@ -25,6 +25,9 @@
     <ClCompile Include="Order.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Stand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\MemTracker\MemTracker.h">
@@ -46,6 +49,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Order.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stand.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
