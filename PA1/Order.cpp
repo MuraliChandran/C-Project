@@ -1,5 +1,7 @@
 #include "Order.h"
+#include "Stand.h"
 ONode *header = nullptr;
+Stand *s = new Stand();
 
 Order::Order()
 {
@@ -8,11 +10,11 @@ Order::Order()
 Order::Order(Name n)
 {
 	IN = n;
+	printf("Add->Order(%s)\n", s->ReturnEnumName(n));
 }
 
 void Order::Add(HotDog hotdog)
 {
-
 	if (n == nullptr)
 	{
 		n = new ONode();
