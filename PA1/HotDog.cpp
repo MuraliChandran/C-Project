@@ -42,31 +42,6 @@ void HotDog::Minus(Condiments Cond)
 
 
 
-char* HotDog::ReturnEnumValue(Condiments c)
-{
-	if (c == Condiments::Plain)
-		return "Plain";
-	else if (c == Condiments::Ketchup)
-		return "Ketchup";
-	else if (c == Condiments::Yellow_Mustard)
-		return "Yellow_Mustard";
-	else if (c == Condiments::Green_Relish)
-		return "Green_Relish";
-	else if (c == Condiments::Chopped_Onions)
-		return "Chopped_Onions";
-	else if (c == Condiments::Tomato_Wedge)
-		return "Tomato_Wedge";
-	else if (c == Condiments::Pickle_Spear)
-		return "Pickle_Spear";
-	else if (c == Condiments::Sport_Peppers)
-		return "Sport_Peppers";
-	else if (c == Condiments::Celery_Salt)
-		return "Celery_Salt";
-	else
-		return "null";
-
-}
-
 void HotDog::InsertNode(Condiments Cond)
 {
 	if (n == nullptr)

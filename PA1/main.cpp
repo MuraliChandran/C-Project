@@ -37,9 +37,9 @@ int main()
 		hotdog_B.Add(Condiments::Sport_Peppers);
 
 	HotDog  hotdog_C;
-		hotdog_C.Add(Condiments::Celery_Salt);
-		hotdog_C.Add(Condiments::Tomato_Wedge);
 		hotdog_C.Add(Condiments::Green_Relish);
+		hotdog_C.Add(Condiments::Tomato_Wedge);
+		hotdog_C.Add(Condiments::Celery_Salt);
 
 	Order order_Jamie(Name::Jaime);
 		order_Jamie.Add(hotdog_A);
@@ -64,9 +64,9 @@ int main()
 
 	// Sansa order:
 	HotDog hotdog_F;
-		hotdog_F.Add(Condiments::Chopped_Onions);
 		hotdog_F.Add(Condiments::Yellow_Mustard);
 		hotdog_F.Add(Condiments::Green_Relish);
+		hotdog_F.Add(Condiments::Chopped_Onions);
 
 	HotDog hotdog_G;
 		hotdog_G.Add(Condiments::Everything);
@@ -83,21 +83,21 @@ int main()
 		stand.Add(order_Sansa);
 		stand.Print();
 
-	//// Remove
-	//	stand.Remove(Name::Cersei);
-	//	stand.Print();
+	// Remove
+		stand.Remove(Name::Cersei);
+		stand.Print();
 
-	//// Remove
-	//	stand.Remove(Name::Sansa);
-	//	stand.Print();
+	// Remove
+		stand.Remove(Name::Sansa);
+		stand.Print();
 
-	//// Remove
-	//	stand.Remove(Name::Jaime);
-	//	stand.Print();
+	// Remove
+		stand.Remove(Name::Jaime);
+		stand.Print();
 
-	//// Remove
-	//	stand.Remove(Name::Arya);
-	//	stand.Print();
+	// Remove
+		stand.Remove(Name::Arya);
+		stand.Print();
 #endif
 
 
