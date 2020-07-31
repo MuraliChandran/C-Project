@@ -2,10 +2,15 @@
 #include "Order.h"
 
 SNode* header = nullptr;
+bool once = false;
 
 Stand::Stand()
 {
-
+	printf("\n\n");
+	printf("-------------------------------------------------\n\n");
+	Intitiate();
+	
+	
 }
 
 void Stand::Add(Order order)
@@ -42,7 +47,9 @@ void Stand::Print()
 {
 	SNode* t = n;
 
-	printf("Stand: currNumOrders:%d  peakNumOrders:%d\n\n", FindNumOrders(), peakOrder);
+	FindNumOrders();
+
+	printf("Stand: currNumOrders:%d  peakNumOrders:%d\n\n", currentOrder, peakOrder);
 
 	while (t != nullptr)
 	{
@@ -86,14 +93,51 @@ void Stand::Remove(Name name)
 	{
 		if (del->order.IN == name)
 		{
-			printf("Remove->Order(%s)\n\n",ReturnEnumName(name));
-			del->prev->next = del->next;
-			del->next->prev = del->prev;
 
-			del = nullptr;
+			printf("Remove->Order(%s)\n\n",ReturnEnumName(name));
+
+			if (del->next == nullptr)
+			{
+				if (del->next == nullptr && del->prev == nullptr)
+				{
+					del->next = nullptr;
+					del->prev = nullptr;
+					
+					del = nullptr;
+
+					n = del;
+
+				}
+				else
+				{
+					del->prev->next = nullptr;
+					del->prev = nullptr;
+
+
+					del = nullptr;
+				}
+
+			}
+			//First Node;
+			else if (del->prev == nullptr)
+			{
+				del = del->next;
+				del->prev = nullptr;
+
+				n = del;
+			
+			}
+			else
+			{
+				del->prev->next = del->next;
+				del->next->prev = del->prev;
+
+				del = nullptr;
+				
+			}
 
 			break;
-
+			
 		}
 		del = del->next;
 	}
@@ -115,7 +159,7 @@ char* Stand::ReturnEnumName(Name name)
 		return "null";
 }
 
-int Stand::FindNumOrders()
+void Stand::FindNumOrders()
 {
 	currentOrder = 0;
 
@@ -138,10 +182,17 @@ int Stand::FindNumOrders()
 			peakOrder = currentOrder;
 		}
 	}
-
 	
-	return currentOrder;
+}
 
+void Stand::Intitiate()
+{
+	if (once == false)
+	{
+		printf("HotDogStand: currNumOrders:%d  peakNumOrders:%d\n\n", currentOrder, peakOrder);
+		once = true;
+	}
+	
 }
 
 
