@@ -11,7 +11,6 @@ struct SNode
 
 class Stand 
 {
-
 public:
 
 	Stand();
@@ -29,7 +28,4 @@ public:
 	int count = 0;
 	int currentOrder = 0;
 	int peakOrder = 0;
-
-	
-	
 };
