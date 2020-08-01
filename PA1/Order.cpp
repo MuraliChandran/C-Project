@@ -2,9 +2,9 @@
 #include "Stand.h"
 ONode *header = nullptr;
 Stand *s = new Stand();
+
 Order::Order()
 {
-
 }
 
 Order::Order(Name n)
@@ -15,7 +15,6 @@ Order::Order(Name n)
 
 void Order::Add(HotDog hotdog)
 {
-
 	if (n == nullptr)
 	{
 		n = new ONode();

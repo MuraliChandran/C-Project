@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
-//#include "MemTracker.h"
-//#include "Trace.h"
+#include "MemTracker.h"
+#include "Trace.h"
 #include "Names.h"
 #include "Condiments.h"
 #include "Order.h"

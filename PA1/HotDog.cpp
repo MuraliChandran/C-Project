@@ -14,7 +14,6 @@ void HotDog::Add(Condiments Cond)
 	//Not for Everything
 	else
 	{
-
 		InsertNode(Cond);
 	}
 }
@@ -26,22 +25,17 @@ void HotDog::Minus(Condiments Cond)
 	{
 		if (del->CondV == Cond)
 		{
-			
+
 			del->prev->next = del->next;
 			del->next->prev = del->prev;
 
 			del = nullptr;
 
 			break;
-			
 		}
 		del = del->next;
 	}
-
 }
-
-
-
 void HotDog::InsertNode(Condiments Cond)
 {
 	if (n == nullptr)
@@ -56,7 +50,7 @@ void HotDog::InsertNode(Condiments Cond)
 	}
 	else
 	{
-		Node *n1 = new Node();
+		Node* n1 = new Node();
 
 		header->next = n1;
 		n1->prev = header;

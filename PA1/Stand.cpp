@@ -9,8 +9,6 @@ Stand::Stand()
 	printf("\n\n");
 	printf("-------------------------------------------------\n\n");
 	Intitiate();
-	
-	
 }
 
 void Stand::Add(Order order)
@@ -84,7 +82,6 @@ void Stand::Print()
 
 void Stand::Remove(Name name)
 {
-
 	printf("-------------------------------------------------\n\n");
 	
 	SNode* del = n;
@@ -116,7 +113,6 @@ void Stand::Remove(Name name)
 
 					del = nullptr;
 				}
-
 			}
 			//First Node;
 			else if (del->prev == nullptr)
@@ -125,7 +121,6 @@ void Stand::Remove(Name name)
 				del->prev = nullptr;
 
 				n = del;
-			
 			}
 			else
 			{
@@ -135,13 +130,10 @@ void Stand::Remove(Name name)
 				del = nullptr;
 				
 			}
-
 			break;
-			
 		}
 		del = del->next;
 	}
-
 	printf("-------------------------------------------------\n\n");
 }
 
@@ -162,7 +154,6 @@ char* Stand::ReturnEnumName(Name name)
 void Stand::FindNumOrders()
 {
 	currentOrder = 0;
-
 	SNode* t = n;
 
 	while (t != nullptr)
