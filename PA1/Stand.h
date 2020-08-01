@@ -21,12 +21,15 @@ public:
 	void Remove(Name name);
 	char* ReturnEnumValue(Condiments Cond);
 	char* ReturnEnumName(Name name);
-	int FindNumOrders();
-	
+	void FindNumOrders();
+	void Intitiate();
+
+
 	SNode *n = nullptr;
 	int count = 0;
 	int currentOrder = 0;
 	int peakOrder = 0;
-	
 
+	
+	
 };
